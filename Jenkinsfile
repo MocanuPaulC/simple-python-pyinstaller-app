@@ -10,7 +10,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'python3.9 -m pip install pytest'
-                sh 'python3.9 -m py.test --junit-xml test-reports/results.xml sources/test_calc.py'
+                sh 'python3.9 -m pytest --junit-xml test-reports/results.xml sources/test_calc.py'
             }
             post {
                 always {
